@@ -1,0 +1,59 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="450"
+        x:Class="SuperCalc.MainWindow"
+        Title="SuperCalc"
+        Width="300" Height="450">
+    <Window.Styles>
+        <Style Selector="Button.num">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+        <Style Selector="Button.del">
+            <Setter Property="Background" Value="#ef494f"/>
+            <Setter Property="Foreground" Value="white"/>
+        </Style>
+        <Style Selector="Button.enter">
+            <Setter Property="Background" Value="#6db442"/>
+            <Setter Property="Foreground" Value="white"/>
+        </Style>
+    </Window.Styles>
+    <Grid VerticalAlignment="Stretch" Margin="2" ColumnDefinitions="*,*,*,*,*" RowDefinitions="2*,*,*,*,*,*,*">
+        <TextBlock Name="Output" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"></TextBlock>
+        <TextBox Name="Input" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5"></TextBox>
+        
+        <Button Click="Button_OnClick" Name="BtnDel" Content="del" Grid.Row="2" Grid.Column="0" Classes="num del"/>
+        <Button Click="Button_OnClick" Name="BtnParOpen" Content="(" Grid.Row="2" Grid.Column="1" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnParClose" Content=")" Grid.Row="2" Grid.Column="2" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnMod" Content="mod" Grid.Row="2" Grid.Column="3" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnPi" Content="π" Grid.Row="2" Grid.Column="4" Classes="num"/>
+        
+        <Button Click="Button_OnClick" Name="Btn7" Content="7" Grid.Row="3" Grid.Column="0" Classes="num"/>
+        <Button Click="Button_OnClick" Name="Btn8" Content="8" Grid.Row="3" Grid.Column="1" Classes="num"/>
+        <Button Click="Button_OnClick" Name="Btn9" Content="9" Grid.Row="3" Grid.Column="2" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnDiv" Content="÷" Grid.Row="3" Grid.Column="3" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnSqrt" Content="√" Grid.Row="3" Grid.Column="4" Classes="num"/>
+            
+        <Button Click="Button_OnClick" Name="Btn4" Content="4" Grid.Row="4" Grid.Column="0" Classes="num"/>
+        <Button Click="Button_OnClick" Name="Btn5" Content="5" Grid.Row="4" Grid.Column="1" Classes="num"/>
+        <Button Click="Button_OnClick" Name="Btn6" Content="6" Grid.Row="4" Grid.Column="2" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnMul" Content="×" Grid.Row="4" Grid.Column="3" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnSq" Content="x²" Grid.Row="4" Grid.Column="4" Classes="num"/>
+            
+        <Button Click="Button_OnClick" Name="Btn1" Content="1" Grid.Row="5" Grid.Column="0" Classes="num"/>
+        <Button Click="Button_OnClick" Name="Btn2" Content="2" Grid.Row="5" Grid.Column="1" Classes="num"/>
+        <Button Click="Button_OnClick" Name="Btn3" Content="3" Grid.Row="5" Grid.Column="2" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnSub" Content="-" Grid.Row="5" Grid.Column="3" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnEq" Content="=" Grid.Row="5" Grid.Column="4" Grid.RowSpan="2" Classes="num enter"/>
+        
+        <Button Click="Button_OnClick" Name="Btn0" Content="0" Grid.Row="6" Grid.Column="0" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnDot" Content="." Grid.Row="6" Grid.Column="1" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnPercent" Content="%" Grid.Row="6" Grid.Column="2" Classes="num"/>
+        <Button Click="Button_OnClick" Name="BtnAdd" Content="+" Grid.Row="6" Grid.Column="3" Classes="num"/>
+    </Grid>
+</Window>
